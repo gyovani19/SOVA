@@ -56,8 +56,6 @@ class DroneAgent:
             return {'throttle': 0, 'yaw': 0}
 
     def detect_unauthorized_person(self, observation):
-        # Supondo que 'people' seja uma lista de dicionários com informações sobre cada pessoa detectada
-        # e que cada dicionário tenha uma chave 'authorized' que é True ou False
         people = observation.get('people', [])
         for person in people:
             if not person.get('authorized', False):
